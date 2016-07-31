@@ -1,3 +1,4 @@
 python-twitter
 fbchat
 pushbullet.py
+lxml
