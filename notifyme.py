@@ -1,7 +1,7 @@
 import time
 import csv
 import os
-import pushbullet.py
+import pushbullet
 import fbchat
 import twitter
 from datetime import datetime
@@ -118,17 +118,17 @@ def main(Pokemon_ID, Pokemon_LAT, Pokemon_LNG, Pokemon_ET, T_send, FBMSG_send, P
             except:
                    pass
 # Write to CSV
-    if CSV_wr == 1:
-        print 'CSV WRITE'
-        try:
-            f = open(os.getcwd()+'\spawn_locationPminer.csv', "a")
-            out = csv.writer(f, delimiter=",")
-            out.writerow([str(Pokemon_ID),str(Pokemon_LAT),str(Pokemon_LNG),str(Pokemon_ET)])
-            f.close()
-        except:
-            pass
-    else:
-        pass
+        if CSV_wr == str(1):
+            print 'CSV WRITE'
+            try:
+                f = open(os.getcwd()+'\spawn_locationPminer.csv', "a")
+                out = csv.writer(f, delimiter=",")
+                out.writerow([str(Pokemon_ID),str(Pokemon_LAT),str(Pokemon_LNG),str(Pokemon_ET)])
+                f.close()
+            except:
+                pass
+        else:
+             pass
 
 
 
